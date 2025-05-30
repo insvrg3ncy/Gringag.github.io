@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOKI WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        :root {
+            --tg-theme-bg-color: #1f1f1f;
+            --tg-theme-text-color: #ffffff;
+            --tg-theme-secondary-bg-color: #2d2d2d;
+            --tg-theme-hint-color: #aaaaaa;
+            --tg-theme-link-color: #8774e1;
+            --tg-theme-button-color: #8774e1;
+            --tg-theme-button-text-color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--tg-theme-bg-color);
+            color: var(--tg-theme-text-color);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .instructions {
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+            color: var(--tg-theme-text-color);
+        }
+        .bot-name {
+            background: var(--tg-theme-bg-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            color: var(--tg-theme-link-color);
+        }
+        h2 {
+            color: var(--tg-theme-text-color);
+            margin-top: 0;
+        }
+        p {
+            color: var(--tg-theme-hint-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <h2>📌 Для начала фарма $DOKI необходимо подключить бота к бизнес-аккаунту Telegram</h2>
+            <p>Как это сделать?</p>
+            <ol>
+                <li>⚙️ Откройте <b>Настройки Telegram</b></li>
+                <li>💼 Перейдите в раздел <b>Telegram для бизнеса</b></li>
+                <li>🤖 Откройте пункт <b>Чат-боты</b></li>
+                <li>✍️ Введите <span class="bot-name">@dokifarm_bot</span></li>
+            </ol>
+            <p>Имя бота: <span class="bot-name">@dokifarm_bot</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Инициализация Telegram WebApp
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+    </script>
+</body>
+</html> 
